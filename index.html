@@ -1,102 +1,94 @@
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>DARSIVAL'S GYM</title>
-      <script src="https://cdn.tailwindcss.com"></script>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="stylesheet" href="style.css" />
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
-      <script src="script.js"></script>
-      <link rel="icon" href="logo.png" type="image/png">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DARSIVAL'S GYM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <script src="script.js"></script>
+    <link rel="icon" href="logo.png" type="image/png">
+  </head>
 
-    <body class="bg-gray-100 text-gray-800">
-      <header class="bg-gradient-to-r from-blue-950 to-blue-900 text-white p-6 flex items-center justify-between shadow-md">
-        <div class="flex items-center gap-8 w-48">
-          <img src="logo.png" alt="DARSIVAL'S GYM Logo" class="h-24 w-auto" />
-          <h1 class="text-3xl font-bold">DARSIVAL'S GYM</h1>
+  <body class="bg-gray-100 text-gray-800">
+    <header class="bg-gradient-to-r from-blue-950 to-blue-900 text-white p-6 flex items-center justify-between shadow-md">
+      <div class="flex items-center gap-8 w-48">
+        <img src="logo.png" alt="DARSIVAL'S GYM Logo" class="h-24 w-auto" />
+        <h1 class="text-3xl font-bold">DARSIVAL'S GYM</h1>
+      </div>
+
+      <nav class="flex flex-col space-y-2 text-lg md:flex-row md:space-y-0 md:space-x-6">
+        <a data-i18n="nav_home" href="./" class="font-bold border-b-2 border-red-600 pb-1">Home</a>
+        <a data-i18n="nav_prices" href="./prices" class="hover:underline">Prices</a>
+        <a data-i18n="nav_trainers" href="./trainers" class="hover:underline">Trainers</a>
+        <a data-i18n="nav_schedule" href="./schedule" class="hover:underline">Schedule</a>
+        <a data-i18n="nav_shop" href="./shop" class="hover:underline">Shop</a>
+        <a data-i18n="nav_gallery" href="./gallery" class="hover:underline">Gallery</a>
+        <a data-i18n="nav_contact" href="./contact" class="hover:underline">Contact</a>
+      </nav>
+
+      <div class="flex items-center space-x-4 w-auto">
+        <div class="relative">
+          <button id="langBtn" class="flex items-center gap-2 px-3 py-2 border border-white rounded hover:bg-white hover:text-blue-900 transition font-semibold">
+            🌐 EN
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="langMenu" class="absolute right-0 mt-2 hidden bg-white text-blue-900 rounded shadow-lg z-50 w-28">
+            <a href="?lang=en" class="block px-12 py-2 hover:bg-blue-100 text-sm">EN</a>
+            <a href="?lang=cz" class="block px-12 py-2 hover:bg-blue-100 text-sm">CZ</a>
+            <a href="?lang=de" class="block px-12 py-2 hover:bg-blue-100 text-sm">DE</a>
+            <a href="?lang=es" class="block px-12 py-2 hover:bg-blue-100 text-sm">ES</a>
+            <a href="?lang=fr" class="block px-12 py-2 hover:bg-blue-100 text-sm">FR</a>
+            <a href="?lang=it" class="block px-12 py-2 hover:bg-blue-100 text-sm">IT</a>
+            <a href="?lang=pl" class="block px-12 py-2 hover:bg-blue-100 text-sm">PL</a>
+            <a href="?lang=sk" class="block px-12 py-2 hover:bg-blue-100 text-sm">SK</a>
+            <a href="?lang=ru" class="block px-12 py-2 hover:bg-blue-100 text-sm">RU</a>
+            <a href="?lang=ua" class="block px-12 py-2 hover:bg-blue-100 text-sm">UA</a>
+          </div>
         </div>
 
-        <nav class="flex flex-col space-y-2 text-lg md:flex-row md:space-y-0 md:space-x-6"">
-          <a data-i18n="nav_home" href="./" class="font-bold border-b-2 border-red-600 pb-1">Home</a>
-          <a data-i18n="nav_prices" href="./prices" class="hover:underline">Prices</a>
-          <a data-i18n="nav_trainers" href="./trainers" class="hover:underline">Trainers</a>
-          <a data-i18n="nav_schedule" href="./schedule" class="hover:underline">Schedule</a>
-          <a data-i18n="nav_shop" href="./shop" class="hover:underline">Shop</a>
-          <a data-i18n="nav_gallery" href="./gallery" class="hover:underline">Gallery</a>
-          <a data-i18n="nav_contact" href="./contact" class="hover:underline">Contact</a>
-        </nav>
+        <a data-i18n="login" href="./login" class="px-4 py-2 border border-white rounded hover:bg-white hover:text-blue-900 transition font-semibold">Login</a>
+        <a data-i18n="signup" href="./signup" class="px-4 py-2 bg-red-600 rounded hover:bg-red-700 transition font-semibold">Sign Up</a>
+      </div>
+    </header>
 
-        <div class="flex items-center space-x-4 w-auto">
-
-          <div class="relative">
-            <button id="langBtn" class="flex items-center gap-2 px-3 py-2 border border-white rounded hover:bg-white hover:text-blue-900 transition font-semibold">
-              🌐 EN
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div id="langMenu" class="absolute right-0 mt-2 hidden bg-white text-blue-900 rounded shadow-lg z-50 w-28">
-              <a href="?lang=en" class="block px-12 py-2 hover:bg-blue-100 text-sm">EN</a>
-              <a href="?lang=cz" class="block px-12 py-2 hover:bg-blue-100 text-sm">CZ</a>
-              <a href="?lang=de" class="block px-12 py-2 hover:bg-blue-100 text-sm">DE</a>
-              <a href="?lang=es" class="block px-12 py-2 hover:bg-blue-100 text-sm">ES</a>
-              <a href="?lang=fr" class="block px-12 py-2 hover:bg-blue-100 text-sm">FR</a>
-              <a href="?lang=it" class="block px-12 py-2 hover:bg-blue-100 text-sm">IT</a>
-              <a href="?lang=pl" class="block px-12 py-2 hover:bg-blue-100 text-sm">PL</a>
-              <a href="?lang=sk" class="block px-12 py-2 hover:bg-blue-100 text-sm">SK</a>
-              <a href="?lang=ru" class="block px-12 py-2 hover:bg-blue-100 text-sm">RU</a>
-              <a href="?lang=ua" class="block px-12 py-2 hover:bg-blue-100 text-sm">UA</a>
+    <div class="relative bg-center bg-cover" style="background-image: url('background.webp');">
+      <div class="pt-32 pb-10 px-10 text-white text-center">
+        <section id="home" class="relative z-10 pt-32 pb-10 px-10 text-white">
+          <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
+            <div class="md:w-2/3 text-center md:text-left">
+              <h2 data-i18n="welcome" class="text-4xl font-bold mb-6">Welcome to DARSIVAL'S GYM</h2>
+              <p data-i18n="welcome_text1" class="text-blue-200 text-lg leading-relaxed">
+                At DARSIVAL'S GYM, we believe that fitness is more than just working out — it's about building confidence, 
+                pushing boundaries, and becoming the best version of yourself. Whether you're a beginner or an experienced 
+                athlete, our team is here to support your goals with expert trainers, modern equipment, and a motivating community. 
+              </p>
+              <p data-i18n="welcome_text2" class="text-blue-200 text-lg mt-4">
+                From high-energy HIIT classes and strength training to peaceful yoga sessions, we offer a variety of programs 
+                tailored to all fitness levels. Join us today and start your transformation — your journey to a stronger, 
+                healthier you begins here.
+              </p>
+            </div>
+            <div class="md:w-1/3 flex justify-center">
+              <img src="logo.png" alt="DARSIVAL'S GYM Logo" class="w-72 h-auto md:-mt-20" />
             </div>
           </div>
+        </section>
+      </div>
 
-          <a data-i18n="login" href="login.html" class="px-4 py-2 border border-white rounded hover:bg-white hover:text-blue-900 transition font-semibold">Login</a>
-          <a data-i18n="signup" href="signup.html" class="px-4 py-2 bg-red-600 rounded hover:bg-red-700 transition font-semibold">Sign Up</a>
+      <section class="bg-cover bg-center h-[200px] flex items-center justify-center text-white text-center mb-32">
+        <div class="bg-black bg-opacity-60 p-10 rounded-xl animate-flyInFancy">
+          <h2 data-i18n="join_text1" class="text-4xl font-bold mb-4">Push Your Limits</h2>
+          <p data-i18n="join_text2" class="mb-6 text-lg">Join DARSIVAL'S GYM and transform your body and mind.</p>
+          <a href="./signup" data-i18n="join_button" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold">
+            Join Now
+          </a>
         </div>
-
-      </header>
-
-
-      <div class="relative bg-center bg-cover" style="background-image: url('background.webp');">
-
-        <div class="pt-32 pb-10 px-10 text-white text-center">
-
-          <section id="home" class="relative z-10 pt-32 pb-10 px-10 text-white">
-            <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
-
-              <div class="md:w-2/3 text-center md:text-left">
-                <h2 data-i18n="welcome" class="text-4xl font-bold mb-6">Welcome to DARSIVAL'S GYM</h2>
-                <p data-i18n="welcome_text1" class="text-blue-200 text-lg leading-relaxed">
-                  At DARSIVAL'S GYM, we believe that fitness is more than just working out — it's about building confidence, 
-                  pushing boundaries, and becoming the best version of yourself. Whether you're a beginner or an experienced 
-                  athlete, our team is here to support your goals with expert trainers, modern equipment, and a motivating community. 
-                </p>
-                <p data-i18n="welcome_text2" class="text-blue-200 text-lg mt-4">
-                  From high-energy HIIT classes and strength training to peaceful yoga sessions, we offer a variety of programs 
-                  tailored to all fitness levels. Join us today and start your transformation — your journey to a stronger, 
-                  healthier you begins here.
-                </p>
-              </div>
-
-              <div class="md:w-1/3 flex justify-center">
-                <img src="logo.png" alt="DARSIVAL'S GYM Logo" class="w-72 h-auto md:-mt-20" />
-              </div>
-            </div>
-          </section>
-        </div>
-
-
-          <section class="bg-cover bg-center h-[200px] flex items-center justify-center text-white text-center mb-32">
-            <div class="bg-black bg-opacity-60 p-10 rounded-xl animate-flyInFancy">
-              <h2 data-i18n="join_text1" class="text-4xl font-bold mb-4">Push Your Limits</h2>
-              <p data-i18n="join_text2" class="mb-6 text-lg">Join DARSIVAL'S GYM and transform your body and mind.</p>
-              <a href="signup.html" data-i18n="join_button" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold">
-                Join Now
-              </a>
-            </div>
-          </section>
+      
 
           <section id="why-us" class="relative z-10 p-10 text-white text-center">
             <div class="max-w-5xl mx-auto">
@@ -195,63 +187,58 @@
             </div>
           </section>
 
-          <footer class="bg-blue-950 text-white py-12 px-10 mt-32">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
+      <footer class="bg-blue-950 text-white py-12 px-10 mt-32">
+       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
 
-              <div class="flex flex-col items-start">
-                <img src="logo.png" alt="DARSIVAL'S GYM Logo" class="h-56 w-auto mb-4">
-              </div>
-
-              <div>
-                <h4 data-i18n="footer_navigation" class="font-bold text-lg mb-4">Navigation</h4>
-                <ul class="space-y-2">
-                  <li><a href="index.html" data-i18n="footer_home" class="hover:underline">Home</a></li>
-                  <li><a href="prices.html" data-i18n="footer_prices" class="hover:underline">Prices</a></li>
-                  <li><a href="trainers.html" data-i18n="footer_trainers" class="hover:underline">Trainers</a></li>
-                  <li><a href="schedule.html" data-i18n="footer_schedule" class="hover:underline">Schedule</a></li>
-                  <li><a href="gallery.html" data-i18n="footer_gallery" class="hover:underline">Gallery</a></li>
-                  <li><a href="contact.html" data-i18n="footer_contact" class="hover:underline">Contact</a></li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 data-i18n="footer_contact2" class="font-bold text-lg mb-4">Contact</h4>
-                <p data-i18n="footer_email" class="mb-2">Email: darsivalsgym@gmail.com</p>
-                <p data-i18n="footer_phone" class="mb-2">Phone: +420 607 487 948</p>
-                <p class="mb-2">Pražská 931</p>
-                <p class="mb-2">547 01 Náchod</p>
-              </div>
-
-              <div>
-                <h4 data-i18n="footer_legal" class="font-bold text-lg mb-4">Legal</h4>
-                <ul class="space-y-2">
-                  <li><a href="legal.html" data-i18n="footer_legalinformation" class="hover:underline">Legal Information</a></li>
-                  <li><a href="terms.html" data-i18n="footer_terms" class="hover:underline">Terms and Conditions</a></li>
-                  <li><a href="privacy.html" data-i18n="footer_privacy" class="hover:underline">Privacy Policy</a></li>
-                  <li><a href="cookies.html" data-i18n="footer_cookie" class="hover:underline">Cookie Settings</a></li>
-              </ul>
-              </div>
-
-            </div>
-
-            <div data-i18n="rights" class="text-center text-sm text-blue-300 mt-12">
-              &copy; 2025 DARSIVAL'S GYM. All rights reserved.
-            </div>
-          </footer>
-
-
-          <div id="cookie-popup" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.15); z-index:9999; max-width:700px; width:90%;">
-            <p style="margin:0 0 12px 0; font-size:15px; color:#333;">
-              We use cookies to improve your experience. By continuing, you agree to our use of cookies.
-            </p>
-            <div style="display:flex; gap:10px;">
-              <button id="cookie-accept" style="padding:10px 18px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; background:#007bff; color:white;">Accept</button>
-              <button id="cookie-decline" style="padding:10px 18px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; background:#e5e5e5; color:#333;">Decline</button>
-            </div>
+         <div class="flex flex-col items-start">
+            <img src="logo.png" alt="DARSIVAL'S GYM Logo" class="h-56 w-auto mb-4">
           </div>
-    </body>
-  </html>
 
+        <div>
+          <h4 data-i18n="footer_navigation" class="font-bold text-lg mb-4">Navigation</h4>
+          <ul class="space-y-2">
+            <li><a href="./" data-i18n="footer_home" class="hover:underline">Home</a></li>
+            <li><a href="./prices" data-i18n="footer_prices" class="hover:underline">Prices</a></li>
+            <li><a href="./trainers" data-i18n="footer_trainers" class="hover:underline">Trainers</a></li>
+            <li><a href="./schedule" data-i18n="footer_schedule" class="hover:underline">Schedule</a></li>
+            <li><a href="./gallery" data-i18n="footer_gallery" class="hover:underline">Gallery</a></li>
+            <li><a href="./contact" data-i18n="footer_contact" class="hover:underline">Contact</a></li>
+          </ul>
+        </div>
 
+        <div>
+          <h4 data-i18n="footer_contact2" class="font-bold text-lg mb-4">Contact</h4>
+          <p data-i18n="footer_email" class="mb-2">Email: darsivalsgym@gmail.com</p>
+          <p data-i18n="footer_phone" class="mb-2">Phone: +420 607 487 948</p>
+          <p class="mb-2">Pražská 931</p>
+          <p class="mb-2">547 01 Náchod</p>
+        </div>
 
+        <div>
+          <h4 data-i18n="footer_legal" class="font-bold text-lg mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="./legal" data-i18n="footer_legalinformation" class="hover:underline">Legal Information</a></li>
+            <li><a href="./terms" data-i18n="footer_terms" class="hover:underline">Terms and Conditions</a></li>
+            <li><a href="./privacy" data-i18n="footer_privacy" class="hover:underline">Privacy Policy</a></li>
+            <li><a href="./cookies" data-i18n="footer_cookie" class="hover:underline">Cookie Settings</a></li>
+          </ul>
+        </div>
 
+      </div>
+
+      <div data-i18n="rights" class="text-center text-sm text-blue-300 mt-12">
+        &copy; 2025 DARSIVAL'S GYM. All rights reserved.
+      </div>
+    </footer>
+
+    <div id="cookie-popup" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.15); z-index:9999; max-width:700px; width:90%;">
+      <p style="margin:0 0 12px 0; font-size:15px; color:#333;">
+        We use cookies to improve your experience. By continuing, you agree to our use of cookies.
+      </p>
+      <div style="display:flex; gap:10px;">
+        <button id="cookie-accept" style="padding:10px 18px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; background:#007bff; color:white;">Accept</button>
+        <button id="cookie-decline" style="padding:10px 18px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; background:#e5e5e5; color:#333;">Decline</button>
+      </div>
+    </div>
+  </body>
+</html>

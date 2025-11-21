@@ -18,18 +18,17 @@
         <h1 class="text-3xl font-bold">DARSIVAL'S GYM</h1>
       </div>
 
-        <nav class="flex space-x-6 text-lg">
-          <a data-i18n="nav_home" href="index.html" class="hover:underline">Home</a>
-          <a data-i18n="nav_prices" href="prices.html" class="hover:underline">Prices</a>
-          <a data-i18n="nav_trainers" href="trainers.html" class="hover:underline">Trainers</a>
-          <a data-i18n="nav_schedule" href="schedule.html" class="hover:underline">Schedule</a>
-          <a data-i18n="nav_shop" href="shop.html" class="hover:underline">Shop</a>
-          <a data-i18n="nav_gallery" href="gallery.html" class="font-bold border-b-2 border-red-600 pb-1">Gallery</a>
-          <a data-i18n="nav_contact" href="contact.html" class="hover:underline">Contact</a>
-        </nav>
+      <nav class="flex space-x-6 text-lg">
+        <a data-i18n="nav_home" href="./" class="hover:underline">Home</a>
+        <a data-i18n="nav_prices" href="./prices" class="hover:underline">Prices</a>
+        <a data-i18n="nav_trainers" href="./trainers" class="hover:underline">Trainers</a>
+        <a data-i18n="nav_schedule" href="./schedule" class="hover:underline">Schedule</a>
+        <a data-i18n="nav_shop" href="./shop" class="hover:underline">Shop</a>
+        <a data-i18n="nav_gallery" href="./gallery" class="font-bold border-b-2 border-red-600 pb-1">Gallery</a>
+        <a data-i18n="nav_contact" href="./contact" class="hover:underline">Contact</a>
+      </nav>
 
       <div class="flex items-center space-x-4 w-auto">
-
         <div class="relative">
           <button id="langBtn" class="flex items-center gap-2 px-3 py-2 border border-white rounded hover:bg-white hover:text-blue-900 transition font-semibold">
             🌐 EN
@@ -51,8 +50,8 @@
           </div>
         </div>
 
-        <a data-i18n="login" href="login.html" class="px-4 py-2 border border-white rounded hover:bg-white hover:text-blue-900 transition font-semibold">Login</a>
-        <a data-i18n="signup" href="signup.html" class="px-4 py-2 bg-red-600 rounded hover:bg-red-700 transition font-semibold">Sign Up</a>
+        <a data-i18n="login" href="./login" class="px-4 py-2 border border-white rounded hover:bg-white hover:text-blue-900 transition font-semibold">Login</a>
+        <a data-i18n="signup" href="./signup" class="px-4 py-2 bg-red-600 rounded hover:bg-red-700 transition font-semibold">Sign Up</a>
       </div>
     </header>
 
@@ -68,49 +67,46 @@
       </div>
     </section>
 
+    <footer class="bg-blue-950 text-white py-12 px-10 mt-32">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
+        <div class="flex flex-col items-start">
+          <img src="logo.png" alt="DARSIVAL'S GYM Logo" class="h-56 w-auto mb-4">
+        </div>
 
-<footer class="bg-blue-950 text-white py-12 px-10 mt-32">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
+        <div>
+          <h4 data-i18n="footer_navigation" class="font-bold text-lg mb-4">Navigation</h4>
+          <ul class="space-y-2">
+            <li><a href="./" data-i18n="footer_home" class="hover:underline">Home</a></li>
+            <li><a href="./prices" data-i18n="footer_prices" class="hover:underline">Prices</a></li>
+            <li><a href="./trainers" data-i18n="footer_trainers" class="hover:underline">Trainers</a></li>
+            <li><a href="./schedule" data-i18n="footer_schedule" class="hover:underline">Schedule</a></li>
+            <li><a href="./gallery" data-i18n="footer_gallery" class="hover:underline">Gallery</a></li>
+            <li><a href="./contact" data-i18n="footer_contact" class="hover:underline">Contact</a></li>
+          </ul>
+        </div>
 
-              <div class="flex flex-col items-start">
-                <img src="logo.png" alt="DARSIVAL'S GYM Logo" class="h-56 w-auto mb-4">
-              </div>
+        <div>
+          <h4 data-i18n="footer_contact2" class="font-bold text-lg mb-4">Contact</h4>
+          <p data-i18n="footer_email" class="mb-2">Email: darsivalsgym@gmail.com</p>
+          <p data-i18n="footer_phone" class="mb-2">Phone: +420 607 487 948</p>
+          <p class="mb-2">Pražská 931</p>
+          <p class="mb-2">547 01 Náchod</p>
+        </div>
 
-              <div>
-                <h4 data-i18n="footer_navigation" class="font-bold text-lg mb-4">Navigation</h4>
-                <ul class="space-y-2">
-                  <li><a href="index.html" data-i18n="footer_home" class="hover:underline">Home</a></li>
-                  <li><a href="prices.html" data-i18n="footer_prices" class="hover:underline">Prices</a></li>
-                  <li><a href="trainers.html" data-i18n="footer_trainers" class="hover:underline">Trainers</a></li>
-                  <li><a href="schedule.html" data-i18n="footer_schedule" class="hover:underline">Schedule</a></li>
-                  <li><a href="gallery.html" data-i18n="footer_gallery" class="hover:underline">Gallery</a></li>
-                  <li><a href="contact.html" data-i18n="footer_contact" class="hover:underline">Contact</a></li>
-                </ul>
-              </div>
+        <div>
+          <h4 data-i18n="footer_legal" class="font-bold text-lg mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="./legal" data-i18n="footer_legalinformation" class="hover:underline">Legal Information</a></li>
+            <li><a href="./terms" data-i18n="footer_terms" class="hover:underline">Terms and Conditions</a></li>
+            <li><a href="./privacy" data-i18n="footer_privacy" class="hover:underline">Privacy Policy</a></li>
+            <li><a href="./cookies" data-i18n="footer_cookie" class="hover:underline">Cookie Settings</a></li>
+          </ul>
+        </div>
+      </div>
 
-              <div>
-                <h4 data-i18n="footer_contact2" class="font-bold text-lg mb-4">Contact</h4>
-                <p data-i18n="footer_email" class="mb-2">Email: darsivalsgym@gmail.com</p>
-                <p data-i18n="footer_phone" class="mb-2">Phone: +420 607 487 948</p>
-                <p class="mb-2">Pražská 931</p>
-                <p class="mb-2">547 01 Náchod</p>
-              </div>
-
-              <div>
-                <h4 data-i18n="footer_legal" class="font-bold text-lg mb-4">Legal</h4>
-                <ul class="space-y-2">
-                  <li><a href="legal.html" data-i18n="footer_legalinformation" class="hover:underline">Legal Information</a></li>
-                  <li><a href="terms.html" data-i18n="footer_terms" class="hover:underline">Terms and Conditions</a></li>
-                  <li><a href="privacy.html" data-i18n="footer_privacy" class="hover:underline">Privacy Policy</a></li>
-                  <li><a href="cookies.html" data-i18n="footer_cookie" class="hover:underline">Cookie Settings</a></li>
-              </ul>
-              </div>
-
-            </div>
-
-            <div data-i18n="rights" class="text-center text-sm text-blue-300 mt-12">
-              &copy; 2025 DARSIVAL'S GYM. All rights reserved.
-            </div>
-          </footer>
+      <div data-i18n="rights" class="text-center text-sm text-blue-300 mt-12">
+        &copy; 2025 DARSIVAL'S GYM. All rights reserved.
+      </div>
+    </footer>
   </body>
 </html>
