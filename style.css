@@ -22,6 +22,90 @@ body {
 }
 
 
+/* ----------------------------- */
+/* MOBILE & TABLET RESPONSIVE FIXES */
+/* ----------------------------- */
+
+@media (max-width: 1024px) {
+
+  /* Header layout */
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  header nav {
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-top: 10px;
+  }
+
+  header img {
+    height: 80px !important;
+  }
+
+  header .flex.items-center.space-x-4 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Logo + text shrink on small devices */
+  header h1 {
+    font-size: 1.7rem;
+  }
+}
+
+/* MOBILE ONLY */
+@media (max-width: 640px) {
+
+  /* Prevent content from overflowing */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Fix hero spacing */
+  #home {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  #home .md\\:flex-row {
+    flex-direction: column !important;
+  }
+
+  #home img {
+    width: 150px !important;
+    margin-top: 10px !important;
+  }
+
+  #home h2 {
+    font-size: 1.8rem !important;
+  }
+
+  #home p {
+    font-size: 1rem !important;
+  }
+
+  /* Center cards and reduce spacing */
+  #why-us .grid,
+  #classes .grid,
+  #trainers .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Fix footer layout */
+  footer .grid {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+
+  footer img {
+    height: 140px !important;
+    margin: 0 auto;
+  }
+}
+
 
 
 
