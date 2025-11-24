@@ -22,90 +22,129 @@ body {
 }
 
 
-/* ----------------------------- */
-/* MOBILE & TABLET RESPONSIVE FIXES */
-/* ----------------------------- */
+/* ------------------------------------------- */
+/* GLOBAL FIXES */
+/* ------------------------------------------- */
+@media (max-width: 1024px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
+}
 
+/* ------------------------------------------- */
+/* HEADER RESPONSIVE */
+/* ------------------------------------------- */
 @media (max-width: 1024px) {
 
-  /* Header layout */
   header {
-    flex-direction: column;
+    flex-direction: column !important;
     text-align: center;
     gap: 20px;
   }
 
-  header nav {
-    flex-direction: column !important;
-    gap: 10px !important;
-    margin-top: 10px;
+  header > div:first-child {
+    width: 100%;
+    justify-content: center;
   }
 
   header img {
-    height: 80px !important;
+    height: 70px !important;
   }
 
-  header .flex.items-center.space-x-4 {
+  /* Navigation stacks vertically */
+  header nav {
+    flex-direction: column !important;
+    width: 100%;
+    gap: 8px !important;
+    text-align: center;
+  }
+
+  /* Login / Signup / Language buttons stacked */
+  header > div:last-child {
     flex-direction: column;
-    gap: 10px;
-  }
-
-  /* Logo + text shrink on small devices */
-  header h1 {
-    font-size: 1.7rem;
+    width: 100%;
+    gap: 10px !important;
+    justify-content: center;
   }
 }
 
-/* MOBILE ONLY */
-@media (max-width: 640px) {
+/* ------------------------------------------- */
+/* HERO SECTION FIX */
+/* ------------------------------------------- */
+@media (max-width: 768px) {
 
-  /* Prevent content from overflowing */
-  body {
-    overflow-x: hidden;
-  }
-
-  /* Fix hero spacing */
   #home {
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
+    padding: 40px 20px !important;
+    text-align: center !important;
   }
 
-  #home .md\\:flex-row {
+  #home .flex {
     flex-direction: column !important;
+    text-align: center !important;
   }
 
   #home img {
     width: 150px !important;
-    margin-top: 10px !important;
+    margin: 20px auto !important;
   }
 
   #home h2 {
-    font-size: 1.8rem !important;
+    font-size: 26px !important;
   }
 
   #home p {
-    font-size: 1rem !important;
+    font-size: 15px !important;
   }
+}
 
-  /* Center cards and reduce spacing */
+/* ------------------------------------------- */
+/* 3-COLUMN SECTIONS (Why us, classes, trainers) */
+/* ------------------------------------------- */
+@media (max-width: 900px) {
+  .grid.md\:grid-cols-3,
   #why-us .grid,
   #classes .grid,
   #trainers .grid {
     grid-template-columns: 1fr !important;
   }
+}
 
-  /* Fix footer layout */
+/* ------------------------------------------- */
+/* “Push Your Limits” banner fix */
+/* ------------------------------------------- */
+@media (max-width: 768px) {
+  section.bg-cover.bg-center.h-\[200px\] {
+    height: auto !important;
+    padding: 40px 20px !important;
+  }
+}
+
+/* ------------------------------------------- */
+/* FOOTER FIX */
+/* ------------------------------------------- */
+@media (max-width: 1024px) {
   footer .grid {
     grid-template-columns: 1fr !important;
-    text-align: center;
+    text-align: center !important;
+    gap: 40px !important;
   }
 
   footer img {
     height: 140px !important;
-    margin: 0 auto;
+    margin: 0 auto !important;
   }
 }
 
+/* ------------------------------------------- */
+/* COOKIE POPUP FIX */
+/* ------------------------------------------- */
+@media (max-width: 768px) {
+  #cookie-popup {
+    width: 90% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
 
 
 
