@@ -7,251 +7,269 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="script.js"></script>
-    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="icon" href="logo.png" type="image/png" />
   </head>
 
-  <body class="bg-gray-100 text-gray-800">
-    <header class="bg-gradient-to-r from-blue-950 to-blue-900 text-white p-6 flex items-center justify-between shadow-md">
-      <div class="flex items-center gap-8 w-48">
-        <img src="logo.png" alt="DARSIVAL'S GYM Logo" class="h-24 w-auto" />
-        <h1 class="text-3xl font-bold">DARSIVAL'S GYM</h1>
+  <body>
+    <header id="main-header">
+      <div id="logo-container">
+        <img src="logo.png" alt="DARSIVAL'S GYM Logo" id="logo" />
+        <h1>DARSIVAL'S <br>GYM</h1>
       </div>
-
-      <nav class="flex flex-col space-y-2 text-lg md:flex-row md:space-y-0 md:space-x-6">
-        <a data-i18n="nav_home" href="./" class="font-bold border-b-2 border-red-600 pb-1">Home</a>
-        <a data-i18n="nav_prices" href="./prices" class="hover:underline">Prices</a>
-        <a data-i18n="nav_trainers" href="./trainers" class="hover:underline">Trainers</a>
-        <a data-i18n="nav_schedule" href="./schedule" class="hover:underline">Schedule</a>
-        <a data-i18n="nav_shop" href="./shop" class="hover:underline">Shop</a>
-        <a data-i18n="nav_gallery" href="./gallery" class="hover:underline">Gallery</a>
-        <a data-i18n="nav_contact" href="./contact" class="hover:underline">Contact</a>
+      
+      <nav id="main-nav">
+        <a data-i18n="nav_home" href="./index.html" class="active">Home</a>
+        <a data-i18n="nav_prices" href="./prices.html">Prices</a>
+        <a data-i18n="nav_trainers" href="./trainers.html">Trainers</a>
+        <a data-i18n="nav_schedule" href="./schedule.html">Schedule</a>
+        <a data-i18n="nav_shop" href="./shop.html">Shop</a>
+        <a data-i18n="nav_gallery" href="./gallery.html">Gallery</a>
+        <a data-i18n="nav_contact" href="./contact.html">Contact</a>
       </nav>
 
-      <div class="flex items-center space-x-4 w-auto">
-        <div class="relative">
-          <button id="langBtn" class="flex items-center gap-2 px-3 py-2 border border-white rounded hover:bg-white hover:text-blue-900 transition font-semibold">
+      <div id="header-actions">
+        <div class="dropdown">
+          <button id="langBtn">
             🌐 EN
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg
+              class="arrow"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <div id="langMenu" class="absolute right-0 mt-2 hidden bg-white text-blue-900 rounded shadow-lg z-50 w-28">
-            <a href="?lang=en" class="block px-12 py-2 hover:bg-blue-100 text-sm">EN</a>
-            <a href="?lang=cz" class="block px-12 py-2 hover:bg-blue-100 text-sm">CZ</a>
-            <a href="?lang=de" class="block px-12 py-2 hover:bg-blue-100 text-sm">DE</a>
-            <a href="?lang=es" class="block px-12 py-2 hover:bg-blue-100 text-sm">ES</a>
-            <a href="?lang=fr" class="block px-12 py-2 hover:bg-blue-100 text-sm">FR</a>
-            <a href="?lang=it" class="block px-12 py-2 hover:bg-blue-100 text-sm">IT</a>
-            <a href="?lang=pl" class="block px-12 py-2 hover:bg-blue-100 text-sm">PL</a>
-            <a href="?lang=sk" class="block px-12 py-2 hover:bg-blue-100 text-sm">SK</a>
-            <a href="?lang=ru" class="block px-12 py-2 hover:bg-blue-100 text-sm">RU</a>
-            <a href="?lang=ua" class="block px-12 py-2 hover:bg-blue-100 text-sm">UA</a>
+
+          <div id="langMenu">
+            <a href="?lang=en">EN</a>
+            <a href="?lang=cz">CZ</a>
+            <a href="?lang=de">DE</a>
+            <a href="?lang=es">ES</a>
+            <a href="?lang=fr">FR</a>
+            <a href="?lang=it">IT</a>
+            <a href="?lang=pl">PL</a>
+            <a href="?lang=sk">SK</a>
+            <a href="?lang=ru">RU</a>
+            <a href="?lang=ua">UA</a>
           </div>
         </div>
 
-        <a data-i18n="login" href="./login" class="px-4 py-2 border border-white rounded hover:bg-white hover:text-blue-900 transition font-semibold">Login</a>
-        <a data-i18n="signup" href="./signup" class="px-4 py-2 bg-red-600 rounded hover:bg-red-700 transition font-semibold">Sign Up</a>
+        <a href="./login.html" class="btn-outline">Login</a>
+        <a href="./signup.html" class="btn-red">Sign Up</a>
       </div>
     </header>
 
-
-      <div class="relative bg-center bg-cover" style="background-image: url('background.webp');">
-
-        <div class="pt-32 pb-10 px-10 text-white text-center">
-
-          <section id="home" class="relative z-10 pt-32 pb-10 px-10 text-white">
-            <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
-
-              <div class="md:w-2/3 text-center md:text-left">
-                <h2 data-i18n="welcome" class="text-4xl font-bold mb-6">Welcome to DARSIVAL'S GYM</h2>
-                <p data-i18n="welcome_text1" class="text-blue-200 text-lg leading-relaxed">
-                  At DARSIVAL'S GYM, we believe that fitness is more than just working out — it's about building confidence, 
-                  pushing boundaries, and becoming the best version of yourself. Whether you're a beginner or an experienced 
-                  athlete, our team is here to support your goals with expert trainers, modern equipment, and a motivating community. 
-                </p>
-                <p data-i18n="welcome_text2" class="text-blue-200 text-lg mt-4">
-                  From high-energy HIIT classes and strength training to peaceful yoga sessions, we offer a variety of programs 
-                  tailored to all fitness levels. Join us today and start your transformation — your journey to a stronger, 
-                  healthier you begins here.
-                </p>
-              </div>
-
-              <div class="md:w-1/3 flex justify-center">
-                <img src="logo.png" alt="DARSIVAL'S GYM Logo" class="w-72 h-auto md:-mt-20" />
-              </div>
+    <div id="hero">
+        <section id="home">
+          <div id="hero-content">
+            <div id="hero-text">
+              <h2>Welcome to DARSIVAL'S GYM</h2>
+              <p>
+                At DARSIVAL'S GYM, we believe that fitness is more than just working out — it's about building confidence, 
+                pushing boundaries, and becoming the best version of yourself. Whether you're a beginner or an experienced 
+                athlete, our team is here to support your goals with expert trainers, modern equipment, and a motivating community.
+              </p>
+              <p>
+                From high-energy HIIT classes and strength training to peaceful yoga sessions, we offer a variety of programs 
+                tailored to all fitness levels. Join us today and start your transformation — your journey to a stronger, 
+                healthier you begins here.
+              </p>
             </div>
-          </section>
+            <div id="hero-logo">
+              <img src="logo.png" alt="DARSIVAL'S GYM Logo" />
+            </div>
+          </div>
+        </section>
+
+
+        <section id="cta-section">
+          <div class="cta-inner animate-flyInFancy">
+            <h2 data-i18n="join_text1">Push Your Limits</h2>
+            <p data-i18n="join_text2">Join DARSIVAL'S GYM and transform your body and mind.</p>
+            <a href="./signup.html" data-i18n="join_button" class="btn-join">Join Now</a>
+          </div>
+        </section>
+
+      <section id="why-us">
+        <div class="container">
+          <h3>Why Choose DARSIVAL'S GYM?</h3>
+          <div class="cards">
+            <div class="card">
+              <h4>Expert Trainers</h4>
+              <p>Our certified trainers bring years of experience and personalized 
+                attention to help you achieve your fitness goals faster and smarter.</p>
+            </div>
+            <div class="card">
+              <h4>State-of-the-Art Equipment</h4>
+              <p>Train with the latest fitness technology and equipment — clean, 
+                safe, and ready to elevate your performance.</p>
+            </div>
+            <div class="card">
+              <h4>Supportive Community</h4>
+              <p>You're not just joining a gym — you're becoming part of a community that 
+                motivates and supports each other every step of the way.</p>
+            </div>
+          </div>
         </div>
+      </section>
 
+      <section id="classes">
+        <h3 data-i18n="ourclasses">Our Classes</h3>
 
-          <section class="bg-cover bg-center h-[200px] flex items-center justify-center text-white text-center mb-32">
-            <div class="bg-black bg-opacity-60 p-10 rounded-xl animate-flyInFancy">
-              <h2 data-i18n="join_text1" class="text-4xl font-bold mb-4">Push Your Limits</h2>
-              <p data-i18n="join_text2" class="mb-6 text-lg">Join DARSIVAL'S GYM and transform your body and mind.</p>
-              <a href="./signup.html" data-i18n="join_button" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold">
-                Join Now
-              </a>
-            </div>
-          </section>
-
-          <section id="why-us" class="relative z-10 p-10 text-white text-center">
-            <div class="max-w-5xl mx-auto">
-              <h3 data-i18n="whyus" class="text-3xl font-bold mb-6">Why Choose DARSIVAL'S GYM?</h3>
-              <div class="grid md:grid-cols-3 gap-8 text-left">
-                  <div class="bg-blue-950 p-6 rounded-xl shadow-md hover:shadow-lg transition">
-                    <h4 data-i18n="expert_trainers" class="text-xl font-semibold mb-2">Expert Trainers</h4>
-                      <p data-i18n="expert_trainers1" class="text-blue-200">
-                        Our certified trainers bring years of experience and personalized attention to help you achieve your fitness goals faster and smarter.
-                      </p>
-                  </div>
-                  <div class="bg-blue-950 p-6 rounded-xl shadow-md hover:shadow-lg transition">
-                    <h4 class="text-xl font-semibold mb-2">State-of-the-Art Equipment</h4>
-                      <p data-i18n="expert_trainers2" class="text-blue-200">
-                        Train with the latest fitness technology and equipment — clean, safe, and ready to elevate your performance.
-                      </p>
-                  </div>
-                  <div class="bg-blue-950 p-6 rounded-xl shadow-md hover:shadow-lg transition">
-                    <h4 class="text-xl font-semibold mb-2">Supportive Community</h4>
-                      <p data-i18n="expert_trainers3" class="text-blue-200">
-                        You're not just joining a gym — you're becoming part of a community that motivates and supports each other every step of the way.
-                      </p>
-                  </div>
-              </div>
-            </div>
-          </section>
-
-          <section id="classes" class="pt-32 pb-10 px-10 text-black text-center">
-            <h3 data-i18n="ourclasses" class="text-3xl font-bold text-white text-center mb-8">Our Classes</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-                <h4 data-i18n="hiit_training" class="text-xl font-semibold mb-2 mt-0">HIIT Training</h4>
-                  <p data-i18n="hiit_training_text" class="text-gray-600">High-intensity interval training to boost your metabolism and stamina.</p>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-                <h4 data-i18n="yoga" class="text-xl font-semibold mb-2">Yoga</h4>
-                  <p data-i18n="yoga_text" class="text-gray-600">Relax and stretch with professional yoga sessions for all levels.</p>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-                <h4 data-i18n="strength_training" class="text-xl font-semibold mb-2">Strength Training</h4>
-                  <p data-i18n="strength_training_texts" class="text-gray-600">Build muscle and strength with expert guidance and equipment.</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="pt-20 pb-20 px-10 text-blue-100 text-center">
-            <div class="max-w-4xl mx-auto text-lg">
-              <h4 data-i18n="motivation" class="text-2xl font-bold mb-4 text-white">Not Just Workouts — This Is a Lifestyle</h4>
-                <p data-i18n="motivation_text1" class="mb-4">
-                  Every class at DARSIVAL'S GYM is designed to challenge you, energize you, and push you past your limits. 
-                  Whether you’re aiming to shred, bulk, tone, or just feel better in your skin — we’ve got the program and 
-                  the intensity to get you there.
-                </p>
-                <p data-i18n="motivation_text2">
-                  Morning, noon, or night — we run sessions that fit your grind. Our expert instructors bring the fire, 
-                  and our members bring the drive. Step in, gear up, and let's get to work.
-                </p>
-            </div>
-          </section>
-
-          <section id="trainers" class="p-10 text-white text-center">
-            <h3 data-i18n="meet_our_trainers" class="text-3xl font-bold text-center mb-8">Meet Our Trainers</h3>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                <div class="text-center p-6 bg-gray-50 rounded-xl shadow">
-                  <img src="images/ai_trainer_alex.png" alt="Trainer" class="w-24 h-24 mx-auto rounded-full mb-4" />
-                    <h4 data-i18n="trainer1" class="text-xl text-black font-semibold">Alex</h4>
-                      <p data-i18n="trainer_job1" class="text-gray-600">Strength Coach</p>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-xl shadow">
-                  <img src="images/ai_trainer_marcus.png" alt="Trainer" class="w-24 h-24 mx-auto rounded-full mb-4" />
-                    <h4 data-i18n="trainer2" class="text-xl text-black font-semibold">Marcus</h4>
-                      <p data-i18n="trainer_job2" class="text-gray-600">HIIT Specialist</p>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-xl shadow">
-                  <img src="images/ai_trainer_emily.png" alt="Trainer" class="w-24 h-24 mx-auto rounded-full mb-4" />
-                    <h4 data-i18n="trainer3" class="text-xl text-black font-semibold">Emily</h4>
-                      <p data-i18n="trainer_job3" class="text-gray-600">Yoga Instructor</p>
-                </div>
-              </div>
-          </section>
-
-          <section class="text-center px-10 mb-32">
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-                <p data-i18n="trainer1_text" class="italic text-gray-700 mb-4">"Watching our members grow stronger and more confident is why I love what I do."</p>
-                <h4 data-i18n="trainer1_citate" class="font-semibold text-lg text-gray-900">– Alex, Strength Coach</h4>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-                <p data-i18n="trainer2_text" class="italic text-gray-700 mb-4">"Every drop of sweat is a step closer to greatness. I’m here to push you through it!"</p>
-                <h4 data-i18n="trainer2_citate" class="font-semibold text-lg text-gray-900">– Marcus, HIIT Specialist</h4>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-                <p data-i18n="trainer3_text" class="italic text-gray-700 mb-4">"Fitness is about balance – in the body and mind. Let’s find yours together."</p>
-                <h4 data-i18n="trainer3_citate" class="font-semibold text-lg text-gray-900">– Emily, Yoga Instructor</h4>
-              </div>
-            </div>
-          </section>
-
-      <footer class="bg-blue-950 text-white py-12 px-10 mt-32">
-       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
-
-         <div class="flex flex-col items-start">
-            <img src="logo.png" alt="DARSIVAL'S GYM Logo" class="h-56 w-auto mb-4">
+        <div class="class-grid">
+          <div id="classCard" class="class-card">
+            <h4 id="classCard" data-i18n="hiit_training">HIIT Training</h4>
+            <p data-i18n="hiit_training_text">
+              High-intensity interval training to boost your metabolism and stamina.
+            </p>
           </div>
 
-        <div>
-          <h4 data-i18n="footer_navigation" class="font-bold text-lg mb-4">Navigation</h4>
-          <ul class="space-y-2">
-            <li><a href="./" data-i18n="footer_home" class="hover:underline">Home</a></li>
-            <li><a href="./prices" data-i18n="footer_prices" class="hover:underline">Prices</a></li>
-            <li><a href="./trainers" data-i18n="footer_trainers" class="hover:underline">Trainers</a></li>
-            <li><a href="./schedule" data-i18n="footer_schedule" class="hover:underline">Schedule</a></li>
-            <li><a href="./gallery" data-i18n="footer_gallery" class="hover:underline">Gallery</a></li>
-            <li><a href="./contact" data-i18n="footer_contact" class="hover:underline">Contact</a></li>
-          </ul>
+          <div id="classCard" class="class-card">
+            <h4 data-i18n="yoga">Yoga</h4>
+            <p data-i18n="yoga_text">
+              Relax and stretch with professional yoga sessions for all levels.
+            </p>
+          </div>
+
+          <div id="classCard" class="class-card">
+            <h4 data-i18n="strength_training">Strength Training</h4>
+            <p data-i18n="strength_training_texts">
+              Build muscle and strength with expert guidance and equipment.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="motivation">
+        <div class="motivation-container">
+          <h4 data-i18n="motivation">Not Just Workouts — This Is a Lifestyle</h4>
+
+          <p data-i18n="motivation_text1">
+            Every class at DARSIVAL'S GYM is designed to challenge you, energize you...
+          </p>
+
+          <p data-i18n="motivation_text2">
+            Morning, noon, or night — we run sessions that fit your grind...
+          </p>
+        </div>
+      </section>
+
+      <section id="trainers">
+        <h3 data-i18n="meet_our_trainers">Meet Our Trainers</h3>
+
+        <div class="trainer-grid">
+
+          <div id="classCard" class="trainer-card">
+            <img src="images/ai_trainer_alex.png" alt="Alex">
+            <h4 data-i18n="trainer1">Alex</h4>
+            <p data-i18n="trainer_job1">Strength Coach</p>
+          </div>
+
+          <div id="classCard" class="trainer-card">
+            <img src="images/ai_trainer_marcus.png" alt="Marcus">
+            <h4 data-i18n="trainer2">Marcus</h4>
+            <p data-i18n="trainer_job2">HIIT Specialist</p>
+          </div>
+
+          <div id="classCard" class="trainer-card">
+            <img src="images/ai_trainer_emily.png" alt="Emily">
+            <h4 data-i18n="trainer3">Emily</h4>
+            <p data-i18n="trainer_job3">Yoga Instructor</p>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="trainer-quotes">
+        <div class="quotes-grid">
+
+          <div id="classCard" class="quote-card">
+            <p data-i18n="trainer1_text" class="quote">
+              "Watching our members grow stronger and more confident is why I love what I do."
+            </p>
+            <h4 data-i18n="trainer1_citate">– Alex, Strength Coach</h4>
+          </div>
+
+          <div id="classCard" class="quote-card">
+            <p data-i18n="trainer2_text" class="quote">
+              "Every drop of sweat is a step closer to greatness..."
+            </p>
+            <h4 data-i18n="trainer2_citate">– Marcus, HIIT Specialist</h4>
+          </div>
+
+          <div id="classCard" class="quote-card">
+            <p data-i18n="trainer3_text" class="quote">
+              "Fitness is about balance – in the body and mind..."
+            </p>
+            <h4 data-i18n="trainer3_citate">– Emily, Yoga Instructor</h4>
+          </div>
+
+        </div>
+      </section>
+    
+
+        <footer id="siteFooter">
+          <div id="footerGrid">
+            <div id="footerLogo">
+              <img src="logo.png" alt="DARSIVAL'S GYM Logo" />
+            </div>
+
+            <div id="footerNav">
+              <h4 data-i18n="footer_navigation">Navigation</h4>
+              <ul>
+                <li><a href="./index.html" data-i18n="footer_home">Home</a></li>
+                <li><a href="./prices.html" data-i18n="footer_prices">Prices</a></li>
+                <li><a href="./trainers.html" data-i18n="footer_trainers">Trainers</a></li>
+                <li><a href="./schedule.html" data-i18n="footer_schedule">Schedule</a></li>
+                <li><a href="./gallery.html" data-i18n="footer_gallery">Gallery</a></li>
+                <li><a href="./contact.html" data-i18n="footer_contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div id="footerContact">
+              <h4 data-i18n="footer_contact2">Contact</h4>
+              <p data-i18n="footer_email">Email: darsivalsgym@gmail.com</p>
+              <p data-i18n="footer_phone">Phone: +420 607 487 948</p>
+              <p>Pražská 931</p>
+              <p>547 01 Náchod</p>
+            </div>
+
+            <div id="footerLegal">
+              <h4 data-i18n="footer_legal">Legal</h4>
+              <ul>
+                <li><a href="./legal.html" data-i18n="footer_legalinformation">Legal Information</a></li>
+                <li><a href="./terms.html" data-i18n="footer_terms">Terms and Conditions</a></li>
+                <li><a href="./privacy.html" data-i18n="footer_privacy">Privacy Policy</a></li>
+                <li><a href="./cookies.html" data-i18n="footer_cookie">Cookie Settings</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="footerRights" data-i18n="rights">
+            &copy; 2025 DARSIVAL'S GYM. All rights reserved.
+          </div>
+        </footer>
+
+
+        <div id="cookie-popup">
+          <p>
+            We use cookies to improve your experience. By continuing, you agree to our use of cookies.
+          </p>
+          <div class="cookie-buttons">
+            <button id="cookie-accept">Accept</button>
+            <button id="cookie-decline">Decline</button>
+          </div>
         </div>
 
-        <div>
-          <h4 data-i18n="footer_contact2" class="font-bold text-lg mb-4">Contact</h4>
-          <p data-i18n="footer_email" class="mb-2">Email: darsivalsgym@gmail.com</p>
-          <p data-i18n="footer_phone" class="mb-2">Phone: +420 607 487 948</p>
-          <p class="mb-2">Pražská 931</p>
-          <p class="mb-2">547 01 Náchod</p>
         </div>
-
-        <div>
-          <h4 data-i18n="footer_legal" class="font-bold text-lg mb-4">Legal</h4>
-          <ul class="space-y-2">
-            <li><a href="./legal" data-i18n="footer_legalinformation" class="hover:underline">Legal Information</a></li>
-            <li><a href="./terms" data-i18n="footer_terms" class="hover:underline">Terms and Conditions</a></li>
-            <li><a href="./privacy" data-i18n="footer_privacy" class="hover:underline">Privacy Policy</a></li>
-            <li><a href="./cookies" data-i18n="footer_cookie" class="hover:underline">Cookie Settings</a></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div data-i18n="rights" class="text-center text-sm text-blue-300 mt-12">
-        &copy; 2025 DARSIVAL'S GYM. All rights reserved.
-      </div>
-    </footer>
-
-    <div id="cookie-popup" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.15); z-index:9999; max-width:700px; width:90%;">
-      <p style="margin:0 0 12px 0; font-size:15px; color:#333;">
-        We use cookies to improve your experience. By continuing, you agree to our use of cookies.
-      </p>
-      <div style="display:flex; gap:10px;">
-        <button id="cookie-accept" style="padding:10px 18px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; background:#007bff; color:white;">Accept</button>
-        <button id="cookie-decline" style="padding:10px 18px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; background:#e5e5e5; color:#333;">Decline</button>
       </div>
     </div>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8367975420175983"
-         crossorigin="anonymous"></script>
-        
   </body>
 </html>
-
-
-
