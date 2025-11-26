@@ -393,7 +393,7 @@ body {
    FOOTER
    =========================== */
 #siteFooter {
-  background-color: #1e3a8a; /* blue-950 */
+  background: linear-gradient(to right, #032c8a, #113eb0);
   color: white;
   padding: 3rem 2.5rem;
   margin-top: 8rem;
@@ -885,6 +885,7 @@ body {
   font-weight: 700;
   color: #222;
 }
+
 
 
 
