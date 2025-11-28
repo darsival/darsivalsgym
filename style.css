@@ -720,6 +720,10 @@ body {
   }
 }
 
+#card_why {
+  width: 350px;
+  height: 182px;
+}
 
 .class-card {
   background: white;
@@ -889,6 +893,7 @@ body {
   font-weight: 700;
   color: #222;
 }
+
 
 
 
