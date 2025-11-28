@@ -1,59 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weekly Schedule | DARSIVAL'S GYM</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <script src="script.js"></script>
-  <link rel="icon" href="logo.png" type="image/png">
-</head>
-<body class="bg-gray-50 text-gray-800 font-inter">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DARSIVAL'S GYM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+    <link rel="icon" href="logo.png" type="image/png" />
+  </head>
 
-<header class="bg-gradient-to-r from-blue-950 to-blue-900 text-white p-6 flex items-center justify-between shadow-md">
-  <div class="flex items-center gap-8 w-48">
-    <img src="logo.png" alt="DARSIVAL'S GYM Logo" class="h-24 w-auto" />
-    <h1 class="text-3xl font-bold">DARSIVAL'S GYM</h1>
-  </div>
-
-  <nav class="flex space-x-6 text-lg">
-    <a data-i18n="nav_home" href="./" class="hover:underline">Home</a>
-    <a data-i18n="nav_prices" href="./prices" class="hover:underline">Prices</a>
-    <a data-i18n="nav_trainers" href="./trainers" class="hover:underline">Trainers</a>
-    <a data-i18n="nav_schedule" href="./schedule" class="font-bold border-b-2 border-red-600 pb-1">Schedule</a>
-    <a data-i18n="nav_shop" href="./shop" class="hover:underline">Shop</a>
-    <a data-i18n="nav_gallery" href="./gallery" class="hover:underline">Gallery</a>
-    <a data-i18n="nav_contact" href="./contact" class="hover:underline">Contact</a>
-  </nav>
-
-  <div class="flex items-center space-x-4 w-auto">
-    <div class="relative">
-      <button id="langBtn" class="flex items-center gap-2 px-3 py-2 border border-white rounded hover:bg-white hover:text-blue-900 transition font-semibold">
-        🌐 EN
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-      <div id="langMenu" class="absolute right-0 mt-2 hidden bg-white text-blue-900 rounded shadow-lg z-50 w-28">
-        <a href="?lang=en" class="block px-12 py-2 hover:bg-blue-100 text-sm">EN</a>
-        <a href="?lang=cz" class="block px-12 py-2 hover:bg-blue-100 text-sm">CZ</a>
-        <a href="?lang=de" class="block px-12 py-2 hover:bg-blue-100 text-sm">DE</a>
-        <a href="?lang=es" class="block px-12 py-2 hover:bg-blue-100 text-sm">ES</a>
-        <a href="?lang=fr" class="block px-12 py-2 hover:bg-blue-100 text-sm">FR</a>
-        <a href="?lang=it" class="block px-12 py-2 hover:bg-blue-100 text-sm">IT</a>
-        <a href="?lang=pl" class="block px-12 py-2 hover:bg-blue-100 text-sm">PL</a>
-        <a href="?lang=sk" class="block px-12 py-2 hover:bg-blue-100 text-sm">SK</a>
-        <a href="?lang=ru" class="block px-12 py-2 hover:bg-blue-100 text-sm">RU</a>
-        <a href="?lang=ua" class="block px-12 py-2 hover:bg-blue-100 text-sm">UA</a>
+  <body>
+    <header id="main-header">
+      <div id="logo-container">
+        <img src="logo.png" alt="DARSIVAL'S GYM Logo" id="logo" />
+        <h1>DARSIVAL'S <br>GYM</h1>
       </div>
-    </div>
+      
+      <nav id="main-nav">
+        <a data-i18n="nav_home" href="./index.html">Home</a>
+        <a data-i18n="nav_prices" href="./prices.html">Prices</a>
+        <a data-i18n="nav_trainers" href="./trainers.html">Trainers</a>
+        <a data-i18n="nav_schedule" href="./schedule.html" class="active">Schedule</a>
+        <a data-i18n="nav_shop" href="./shop.html">Shop</a>
+        <a data-i18n="nav_gallery" href="./gallery.html">Gallery</a>
+        <a data-i18n="nav_contact" href="./contact.html">Contact</a>
+      </nav>
 
-    <a data-i18n="login" href="./login" class="px-4 py-2 border border-white rounded hover:bg-white hover:text-blue-900 transition font-semibold">Login</a>
-    <a data-i18n="signup" href="./signup" class="px-4 py-2 bg-red-600 rounded hover:bg-red-700 transition font-semibold">Sign Up</a>
-  </div>
-</header>
+      <div id="header-actions">
+        <div class="dropdown">
+          <button id="langBtn">
+            🌐 EN
+            <svg
+              class="arrow"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div id="langMenu">
+            <a href="?lang=en">EN</a>
+            <a href="?lang=cz">CZ</a>
+            <a href="?lang=de">DE</a>
+            <a href="?lang=es">ES</a>
+            <a href="?lang=fr">FR</a>
+            <a href="?lang=it">IT</a>
+            <a href="?lang=pl">PL</a>
+            <a href="?lang=sk">SK</a>
+            <a href="?lang=ru">RU</a>
+            <a href="?lang=ua">UA</a>
+          </div>
+        </div>
+
+        <a href="./login.html" class="btn-outline">Login</a>
+        <a href="./signup.html" class="btn-red">Sign Up</a>
+      </div>
+    </header>
 
 <main class="max-w-7xl mx-auto py-16 px-4 md:px-8">
   <h2 data-i18n="weekly_schedule_title" class="text-4xl font-bold text-center mb-12 text-blue-900">Weekly Class Schedule</h2>
@@ -246,3 +257,4 @@
   
   </body>
 </html>
+
