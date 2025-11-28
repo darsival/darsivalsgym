@@ -727,6 +727,10 @@ body {
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   transition: 0.2s;
+  text-align: left;   /* CENTER TITLE + TEXT */
+}
+
+#classCardtitle {
   text-align: center;   /* CENTER TITLE + TEXT */
 }
 
@@ -885,6 +889,7 @@ body {
   font-weight: 700;
   color: #222;
 }
+
 
 
 
